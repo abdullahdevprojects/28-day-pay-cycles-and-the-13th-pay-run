@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>28 Day Pay Cycles vs Monthly Payroll: The 13th Pay Run Explained</title>
+<meta name="description" content="Why four weekly payroll produces 13 pay runs a year, how the drifting pay date breaks monthly budgets, the benefit assessment problem it causes, and where 28 day periods appear in tenancies.">
+<link rel="canonical" href="https://example.github.io/info/days/28-days-from-today/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="28 Day Pay Cycles vs Monthly Payroll: The 13th Pay Run Explained">
+<meta property="og:description" content="Why four weekly payroll produces 13 pay runs a year, how the drifting pay date breaks monthly budgets, the benefit assessment problem it causes, and where 28 day periods appear in tenancies.">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<!--
+  INTERNAL LINKING
+  ----------------
+  Every <strong class="xlink" data-link="SLUG"> below is a planned anchor.
+  After you deploy the other pages, wrap it in a link, e.g.
+
+    <a href="https://example.com/info/days/28-days-from-today/"><strong class="xlink">...</strong></a>
+
+  The "Related" list at the bottom has href="#" placeholders with the same slugs.
+-->
+<style>
+:root{
+  --paper:#F3F5F2; --card:#FFFFFF; --ink:#16231F; --ink-soft:#4B5A54;
+  --rule:#D3DBD5; --deep:#0E5347; --deep-soft:#E3EEE9; --mark:#A85C0B; --mark-soft:#FBF0DF;
+  --maxw:70ch;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:"Iowan Old Style","Charter","Palatino Linotype",Palatino,Georgia,serif;
+  font-size:18px; line-height:1.68; text-rendering:optimizeLegibility;
+}
+a{color:var(--deep)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--mark); outline-offset:3px; border-radius:2px}
+.wrap{max-width:1140px; margin:0 auto; padding:0 24px}
+
+/* header */
+.top{border-bottom:1px solid var(--rule); background:var(--card)}
+.top .wrap{display:flex; gap:18px; align-items:baseline; justify-content:space-between; padding-top:16px; padding-bottom:16px}
+.brand{font-size:17px; font-weight:600; letter-spacing:.01em; text-decoration:none; color:var(--ink)}
+.brand span{color:var(--deep)}
+.top nav a{font-size:15px; margin-left:18px; color:var(--ink-soft); text-decoration:none}
+.top nav a:hover{color:var(--deep); text-decoration:underline}
+
+/* hero */
+.hero{background:var(--card); border-bottom:1px solid var(--rule); padding:44px 0 34px}
+.hero h1{font-size:clamp(30px,5vw,46px); line-height:1.12; margin:0 0 14px; font-weight:600; letter-spacing:-.015em; max-width:22ch}
+.dek{font-size:20px; color:var(--ink-soft); margin:0; max-width:62ch}
+.byline{margin:20px 0 0; font-size:14.5px; color:var(--ink-soft)}
+.byline b{font-weight:600; color:var(--ink)}
+
+/* day strip */
+.strip{margin:30px 0 0; padding:18px 18px 14px; background:var(--deep-soft); border:1px solid var(--rule); border-radius:4px}
+.strip-head{display:flex; justify-content:space-between; font-size:14px; color:var(--ink-soft); margin-bottom:10px}
+.strip-head b{color:var(--deep); font-weight:600}
+.ticks{display:flex; gap:2px; align-items:flex-end; height:38px}
+.tick{flex:1 1 auto; min-width:1px; background:#9FBCB2; height:12px; border-radius:1px; transform-origin:bottom;
+      animation:grow .5s ease-out both}
+.tick.week{background:#5E8F82; height:22px}
+.tick.month{background:var(--deep); height:32px}
+.tick.last{background:var(--mark); height:38px; min-width:4px}
+@keyframes grow{from{transform:scaleY(.15); opacity:.2} to{transform:scaleY(1); opacity:1}}
+@media (prefers-reduced-motion:reduce){.tick{animation:none}}
+.strip-foot{margin-top:9px; font-size:13.5px; color:var(--ink-soft)}
+
+/* layout */
+.cols{display:grid; grid-template-columns:230px minmax(0,1fr); gap:54px; padding:40px 0 10px; align-items:start}
+@media (max-width:880px){.cols{grid-template-columns:1fr; gap:0}}
+.toc{position:sticky; top:24px; font-size:15px; line-height:1.45}
+.toc h2{font-size:14px; font-weight:600; margin:0 0 10px; color:var(--ink-soft)}
+.toc ol{list-style:none; margin:0; padding:0; border-left:1px solid var(--rule)}
+.toc li{margin:0}
+.toc a{display:block; padding:6px 0 6px 14px; margin-left:-1px; border-left:2px solid transparent;
+       color:var(--ink-soft); text-decoration:none}
+.toc a:hover{color:var(--deep)}
+.toc a.on{color:var(--deep); border-left-color:var(--deep); font-weight:600}
+@media (max-width:880px){.toc{display:none}}
+
+article{max-width:var(--maxw)}
+article h2{font-size:27px; line-height:1.22; margin:42px 0 12px; font-weight:600; letter-spacing:-.01em; scroll-margin-top:22px}
+article h3{font-size:20.5px; margin:26px 0 8px; font-weight:600}
+article p{margin:0 0 17px}
+article ul,article ol{margin:0 0 18px; padding-left:22px}
+article li{margin:0 0 8px}
+.lede{font-size:19.5px}
+
+/* internal link markers */
+.xlink{font-weight:600; color:var(--ink); background:linear-gradient(transparent 62%, var(--mark-soft) 62%);
+       box-shadow:inset 0 -1px 0 var(--mark); cursor:help}
+a .xlink{color:var(--deep)}
+
+blockquote{margin:24px 0; padding:2px 0 2px 20px; border-left:3px solid var(--deep); color:var(--ink-soft); font-size:19px}
+.note{background:var(--card); border:1px solid var(--rule); border-left:3px solid var(--mark); padding:16px 18px; margin:26px 0; font-size:17px}
+.note p:last-child{margin:0}
+.note b{font-weight:600}
+
+table{width:100%; border-collapse:collapse; margin:22px 0; font-size:16.5px; background:var(--card)}
+caption{text-align:left; font-size:14.5px; color:var(--ink-soft); padding-bottom:8px}
+th,td{border:1px solid var(--rule); padding:10px 12px; text-align:left; vertical-align:top}
+th{background:var(--deep-soft); font-weight:600}
+.scroller{overflow-x:auto}
+
+/* faq */
+.faq details{border-bottom:1px solid var(--rule); padding:4px 0}
+.faq summary{cursor:pointer; padding:13px 0; font-weight:600; font-size:18px; list-style:none; display:flex; justify-content:space-between; gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+"; color:var(--deep); font-weight:400; font-size:22px; line-height:1}
+.faq details[open] summary::after{content:"\2013"}
+.faq details p{margin:0 0 14px; color:var(--ink-soft)}
+
+/* related */
+.related{border-top:1px solid var(--rule); margin-top:54px; padding:34px 0 0}
+.related h2{margin-top:0}
+.rgrid{display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:10px; padding:0; margin:0; list-style:none}
+.rgrid a{display:block; padding:12px 14px; background:var(--card); border:1px solid var(--rule); text-decoration:none; color:var(--ink); font-size:16px}
+.rgrid a:hover{border-color:var(--deep); background:var(--deep-soft)}
+.rgrid b{display:block; color:var(--deep); font-weight:600; font-size:15px; margin-bottom:2px}
+
+footer{border-top:1px solid var(--rule); margin-top:48px; background:var(--card)}
+footer .wrap{padding:26px 24px 40px; font-size:14.5px; color:var(--ink-soft)}
+#top-btn{position:fixed; right:18px; bottom:18px; padding:10px 14px; border:1px solid var(--rule);
+  background:var(--card); color:var(--ink); border-radius:3px; font:inherit; font-size:14px; cursor:pointer;
+  opacity:0; pointer-events:none; transition:opacity .2s}
+#top-btn.show{opacity:1; pointer-events:auto}
+@media print{.toc,#top-btn,.top nav{display:none}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/">Day<span>Count</span> Guides</a>
+    <nav><a href="#faq">FAQ</a><a href="#related">Other timelines</a></nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>28 day pay cycles and the 13th pay run</h1>
+    <p class="dek">Four weekly payroll pays 13 times a year instead of 12. The arithmetic is simple. The month with two pay dates is where budgets come apart.</p>
+    <p class="byline">Updated September 2026 &nbsp;·&nbsp; Reading time about <b>4 minutes</b> &nbsp;·&nbsp; Topic: Payroll and pay cycles</p>
+    <div class="strip">
+      <div class="strip-head"><span>Start date</span><b>28-day window</b><span>Deadline</span></div>
+      <div class="ticks" id="ticks" data-days="28" aria-hidden="true"></div>
+      <p class="strip-foot">13 cycles of 28 days is 364 days, so the pay date drifts earlier through the year.</p>
+    </div>
+  </div>
+</section>
+
+<div class="wrap cols">
+  <aside class="toc" aria-label="On this page">
+    <h2>On this page</h2>
+    <ol id="toc-list"></ol>
+  </aside>
+
+  <main>
+    <article>
+
+      <p class="lede">Some employers pay every 28 days. Some pay monthly. The two look almost identical on a payslip and behave completely differently across a year, and the gap shows up in rent, in tax, and in one month where two pay dates land and one month where none do.</p>
+
+      <h2 id="difference" data-short="28 days vs monthly">28 day cycles against calendar monthly</h2>
+      <p>A calendar monthly payroll runs 12 times a year, always on the same date or the same weekday of the month. A 28 day payroll runs every four weeks, which is 13 times a year, because 13 × 28 = 364.</p>
+      <p>Same annual salary, different arithmetic. Someone on 39,000 a year paid monthly receives 3,250 each time. Paid four-weekly, the same salary is 3,000 per run across 13 runs. The pay date also moves backwards through the month by two or three days every cycle.</p>
+      <div class="scroller"><table>
+        <caption>The same 39,000 salary under three pay frequencies</caption>
+        <tr><th>Frequency</th><th>Runs per year</th><th>Gross per run</th><th>Pay date behaviour</th></tr>
+        <tr><td>Calendar monthly</td><td>12</td><td>3,250.00</td><td>Fixed date each month</td></tr>
+        <tr><td>Four weekly (28 days)</td><td>13</td><td>3,000.00</td><td>Same weekday, drifts earlier each month</td></tr>
+        <tr><td>Fortnightly</td><td>26</td><td>1,500.00</td><td>Same weekday, two extra-pay months a year</td></tr>
+      </table></div>
+
+      <h2 id="thirteenth" data-short="The 13th pay run">The month with two pay dates</h2>
+      <p>Because 13 cycles of 28 days is 364 days, the pay dates drift one or two days earlier each year and one month always ends up with two of them. Payroll teams call it the thirteenth run. People notice it as a month that feels like a bonus.</p>
+      <p>It is not a bonus. It is the same annual salary arriving in a different shape, and the month either side of it is where budgets break, because monthly bills do not drift. Rent, mortgage, insurance, subscriptions and childcare are all charged on the calendar.</p>
+      <div class="note"><p><b>The practical fix:</b> budget on four-weekly income against four-weekly costs, and treat the thirteenth run as the fund that covers the months where the calendar bills and the pay dates fall out of step.</p></div>
+
+      <h2 id="tax" data-short="Tax and benefits">Tax codes and benefit assessment periods</h2>
+      <p>Tax systems generally cope fine with four-weekly pay, because they use period tables that match the frequency. The trouble comes from means tested benefits that assess income by calendar month.</p>
+      <p>In the UK, Universal Credit uses a monthly assessment period. If two four-weekly wages land inside one assessment period, the system reads it as a large income month and cuts the award, then reads the following month as a low income month. This produced years of tribunal cases for people on four-weekly payroll, and claimants have to flag it rather than the system catching it automatically.</p>
+      <p>The same mismatch affects income based student finance, some childcare support, and anything else that asks for "last month's payslips".</p>
+
+      <h2 id="rent" data-short="28 day rent">Where 28 days shows up in rent and contracts</h2>
+      <p>Weekly and four-weekly tenancies are common in student housing, HMOs and short term lets. A 28 day period is convenient because it always contains exactly four rent days and four weekend changeovers.</p>
+      <p>Notice periods in these agreements are often set at 28 days rather than a calendar month, which is not the same thing. Notice given on 3 March under a 28 day clause ends on 31 March. Under a calendar month clause it ends on 3 April. Anyone comparing it to a standard <strong class="xlink" data-link="30-days-from-today" data-days="30">30 day notice</strong> will be out by up to three days, and in a dispute those days are real money.</p>
+      <p>Some licence agreements and rolling contracts also use 28 days to stay below a threshold that would trigger a different legal status. In several jurisdictions, an occupancy under 28 days is treated as short stay accommodation rather than a tenancy, which changes the rights on both sides.</p>
+
+      <h2 id="lunar" data-short="Cycles and 28">The 28 day cycle in health and scheduling</h2>
+      <p>The menstrual cycle is often quoted as 28 days, which is the textbook average rather than the common experience. Large scale app data, including a study of more than 600,000 cycles published in 2019, put the average nearer 29.3 days, with normal variation running roughly 21 to 35 days. Only a minority of cycles are exactly 28.</p>
+      <p>Medication packs, rota cycles and shift patterns use 28 days for a different reason: a four week block repeats the same weekday pattern, so a rota written once works forever. A 30 day block does not, which is the main reason rota planners avoid it.</p>
+
+      <h2 id="employer" data-short="Should you switch">If you run payroll and are choosing</h2>
+      <p>Four-weekly suits hourly workforces with weekly timesheets, because the pay period matches the timesheet period exactly. Calendar monthly suits salaried staff, because it matches how their bills are charged and how HMRC style monthly reporting works.</p>
+      <p>Switching from four-weekly to monthly is usually the harder direction, since staff go through one long gap between pay dates during the transition. Most employers bridge it with an advance rather than asking people to absorb it.</p>
+      <p>If you are setting a longer planning rhythm, quarterly and half-year cycles line up better with calendar months, which is why business reviews land on <strong class="xlink" data-link="90-days-from-today" data-days="90">90 day quarters</strong> and <strong class="xlink" data-link="180-days-from-today" data-days="180">180 day half years</strong> rather than on multiples of 28.</p>
+
+
+      <h2 id="faq" data-short="Questions">Common questions</h2>
+      <div class="faq">
+        <details><summary>How many times a year do you get paid on a 28 day cycle?</summary><p>13 times, because 13 cycles of 28 days is 364 days. That is one more pay run than a calendar monthly payroll, with a smaller amount in each run for the same annual salary.</p></details>
+        <details><summary>Is four weekly pay the same as monthly pay?</summary><p>No. A month averages 30.4 days, so a four weekly cycle is shorter. The pay date drifts earlier through the year and one month always receives two payments.</p></details>
+        <details><summary>Why does four weekly pay cause benefit problems?</summary><p>Means tested benefits are usually assessed over calendar months. When two four weekly wages fall inside one assessment period, the system reads it as a high income month and reduces the award for that period.</p></details>
+        <details><summary>Is 28 days the same as a month's notice in a tenancy?</summary><p>No. 28 days is a fixed count of days, while a calendar month runs to the same date in the following month. Depending on the month, they can differ by up to three days.</p></details>
+      </div>
+    </article>
+
+    <section class="related" id="related">
+      <h2>Other counting windows</h2>
+      <p>The same deadline logic shows up at different lengths. These pages cover the rest of them.</p>
+      <ul class="rgrid">
+        <li><a href="#" data-link="7-days-from-today"><b>7 days</b>One week notice at work</a></li>
+        <li><a href="#" data-link="14-days-from-today"><b>14 days</b>Two week notice periods</a></li>
+        <li><a href="#" data-link="21-days-from-today"><b>21 days</b>The 21 day habit claim</a></li>
+        <li><a href="#" data-link="30-days-from-today"><b>30 days</b>30 day money back rules</a></li>
+        <li><a href="#" data-link="45-days-from-today"><b>45 days</b>45 day escrow closing</a></li>
+        <li><a href="#" data-link="60-days-from-today"><b>60 days</b>60 day return policies</a></li>
+        <li><a href="#" data-link="90-days-from-today"><b>90 days</b>90 day job probation</a></li>
+        <li><a href="#" data-link="120-days-from-today"><b>120 days</b>120 day shipping windows</a></li>
+        <li><a href="#" data-link="150-days-from-today"><b>150 days</b>150 day seasonal planning</a></li>
+        <li><a href="#" data-link="180-days-from-today"><b>180 days</b>The 183 day tax rule</a></li>
+      </ul>
+    </section>
+  </main>
+</div>
+
+<footer><div class="wrap">
+  <p>General information only, not legal, tax, immigration, medical or financial advice. Rules change and they differ by country, state and contract. Check the wording of your own agreement or the relevant official source before you rely on a date.</p>
+</div></footer>
+
+<button id="top-btn" type="button">Back to top</button>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"28 day pay cycles and the 13th pay run","description":"Why four weekly payroll produces 13 pay runs a year, how the drifting pay date breaks monthly budgets, the benefit assessment problem it causes, and where 28 day periods appear in tenancies.","datePublished":"2026-09-16","dateModified":"2026-09-16","mainEntityOfPage":"https://example.github.io/info/days/28-days-from-today/","author":{"@type":"Organization","name":"DayCount Guides"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many times a year do you get paid on a 28 day cycle?","acceptedAnswer":{"@type":"Answer","text":"13 times, because 13 cycles of 28 days is 364 days. That is one more pay run than a calendar monthly payroll, with a smaller amount in each run for the same annual salary."}},{"@type":"Question","name":"Is four weekly pay the same as monthly pay?","acceptedAnswer":{"@type":"Answer","text":"No. A month averages 30.4 days, so a four weekly cycle is shorter. The pay date drifts earlier through the year and one month always receives two payments."}},{"@type":"Question","name":"Why does four weekly pay cause benefit problems?","acceptedAnswer":{"@type":"Answer","text":"Means tested benefits are usually assessed over calendar months. When two four weekly wages fall inside one assessment period, the system reads it as a high income month and reduces the award for that period."}},{"@type":"Question","name":"Is 28 days the same as a month's notice in a tenancy?","acceptedAnswer":{"@type":"Answer","text":"No. 28 days is a fixed count of days, while a calendar month runs to the same date in the following month. Depending on the month, they can differ by up to three days."}}]}]}</script>
+<script>
+(function(){
+  // day strip
+  var strip=document.getElementById('ticks');
+  if(strip){
+    var n=+strip.dataset.days, step=n>90?1:1, frag=document.createDocumentFragment();
+    for(var i=1;i<=n;i++){
+      var t=document.createElement('span'); t.className='tick';
+      if(i%30===0) t.className+=' month'; else if(i%7===0) t.className+=' week';
+      if(i===n) t.className='tick last';
+      t.style.animationDelay=(Math.min(i,120)*(420/Math.min(n,120)))+'ms';
+      t.title='Day '+i; frag.appendChild(t);
+    }
+    strip.appendChild(frag);
+  }
+  // build TOC + scrollspy
+  var art=document.querySelector('article'), toc=document.getElementById('toc-list');
+  if(art&&toc){
+    var hs=art.querySelectorAll('h2[id]'), links=[];
+    hs.forEach(function(h){
+      var li=document.createElement('li'), a=document.createElement('a');
+      a.href='#'+h.id; a.textContent=h.dataset.short||h.textContent;
+      li.appendChild(a); toc.appendChild(li); links.push(a);
+    });
+    var spy=new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(e.isIntersecting){
+          links.forEach(function(a){a.classList.toggle('on', a.getAttribute('href')==='#'+e.target.id);});
+        }
+      });
+    },{rootMargin:'-10% 0px -75% 0px'});
+    hs.forEach(function(h){spy.observe(h);});
+  }
+  // back to top
+  var btn=document.getElementById('top-btn');
+  if(btn){
+    addEventListener('scroll',function(){btn.classList.toggle('show', scrollY>900);},{passive:true});
+    btn.addEventListener('click',function(){
+      var rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+      scrollTo({top:0,behavior:rm?'auto':'smooth'});
+    });
+  }
+  // one FAQ open at a time
+  var ds=document.querySelectorAll('.faq details');
+  ds.forEach(function(d){d.addEventListener('toggle',function(){
+    if(d.open) ds.forEach(function(o){if(o!==d) o.open=false;});
+  });});
+})();
+</script>
+</body>
+</html>
